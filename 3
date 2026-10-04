@@ -6,13 +6,13 @@
     <title>Understanding the Sunk Cost Fallacy</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --accent: #ef4444;
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -29,55 +29,69 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
+            background-color: #ffffff;
+            color: var(--text-main);
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem 3rem 2rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            color: #0f172a;
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
             margin: 0 auto;
         }
 
         .container {
             max-width: 1000px;
-            margin: -2rem auto 3rem auto;
+            margin: 3rem auto;
             padding: 0 1.5rem;
         }
 
         section {
             background: var(--card-bg);
-            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .section-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
         }
 
         h2 {
-            color: var(--primary-dark);
+            color: var(--text-main);
             margin-bottom: 1.2rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
+            font-size: 2rem;
+            font-weight: 700;
         }
 
         p {
             margin-bottom: 1rem;
             color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         .highlight-box {
-            background-color: #eff6ff;
+            background-color: #ffffff;
             border-left: 4px solid var(--primary);
-            padding: 1.2rem;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 0 8px 8px 0;
         }
@@ -90,16 +104,27 @@
         }
 
         .example-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .example-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
         .example-card h3 {
             color: var(--text-main);
             margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         ul {
@@ -110,15 +135,16 @@
 
         li {
             margin-bottom: 0.8rem;
+            font-size: 1.05rem;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
-            background: var(--card-bg);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            background: #ffffff;
         }
     </style>
 </head>
@@ -133,6 +159,7 @@
         
         <!-- What is it section -->
         <section>
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Decision making and analysis" class="section-image">
             <h2>What is the Sunk Cost Fallacy?</h2>
             <p>The <strong>Sunk Cost Fallacy</strong> is a cognitive bias where a person continues a behavior, endeavor, or investment as a result of previously invested resources (time, money, or effort).</p>
             <div class="highlight-box">
@@ -144,21 +171,31 @@
         <!-- Examples section -->
         <section>
             <h2>Real-World Examples</h2>
+            <p>This psychological trap manifests itself in various areas of life:</p>
             <div class="examples-grid">
                 
                 <div class="example-card">
-                    <h3>1. The Bad Movie Ticket</h3>
-                    <p>You buy a $20 movie ticket. Twenty minutes in, you realize the movie is terrible and completely boring. The fallacy tells you to stay until the end so your $20 "isn't wasted." The rational choice? Walk out, because the $20 is gone either way, but you can save your remaining time.</p>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" alt="Cinema theater seats">
+                        <h3>1. The Bad Movie Ticket</h3>
+                        <p>You buy a $20 ticket. Twenty minutes in, you realize the movie is terrible. The fallacy tells you to stay so your money "isn't wasted." The rational choice? Walk out and save your time.</p>
+                    </div>
                 </div>
 
                 <div class="example-card">
-                    <h3>2. Failing Business Ventures</h3>
-                    <p>A company pours millions of dollars into a software project that is outdated and failing. Instead of canceling it, leadership invests millions more because "we've already spent so much and cannot quit now."</p>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Business planning">
+                        <h3>2. Failing Projects</h3>
+                        <p>A company pours millions into outdated software. Instead of canceling, leadership invests more because "we've already spent so much and cannot quit now."</p>
+                    </div>
                 </div>
 
                 <div class="example-card">
-                    <h3>3. Toxic Relationships</h3>
-                    <p>Staying in an unhappy or unhealthy relationship for years solely because of "all the years we've already invested together," ignoring whether the future holds any happiness.</p>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Couple walking together">
+                        <h3>3. Toxic Relationships</h3>
+                        <p>Staying in an unhappy relationship solely because of "all the years we've already invested together," ignoring whether the future holds any happiness.</p>
+                    </div>
                 </div>
 
             </div>
@@ -166,13 +203,14 @@
 
         <!-- How to avoid section -->
         <section>
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80" alt="Team strategy planning" class="section-image">
             <h2>How to Avoid the Fallacy</h2>
             <p>Overcoming this mental trap requires shifting your focus from the past to the future. Here are practical ways to beat it:</p>
             <ul>
-                <li><strong>Ignore Past Investments:</strong> When making a choice, pretend you are starting fresh today with zero history attached to the situation. Ask yourself: <em>"Would I start this project/relationship right now if I hadn't invested anything before?"</em></li>
-                <li><strong>Define Exit Strategies Early:</strong> Before entering a major project or investment, set clear objective boundaries (e.g., maximum budget or timeline) where you will re-evaluate or walk away.</li>
-                <li><strong>Seek an Outside Perspective:</strong> Talk to a trusted friend, mentor, or colleague who has no emotional attachment to what you've already spent. They will see the situation objectively.</li>
-                <li><strong>Accept Losses as Tuition:</strong> Reframe past losses not as "waste," but as tuition paid for a valuable life or business lesson.</li>
+                <li><strong>Ignore Past Investments:</strong> Pretend you are starting fresh today with zero history attached. Ask yourself: <em>"Would I start this project right now if I hadn't invested anything before?"</em></li>
+                <li><strong>Define Exit Strategies Early:</strong> Before entering a major project, set clear objective boundaries (like a budget or timeline) where you will re-evaluate or walk away.</li>
+                <li><strong>Seek an Outside Perspective:</strong> Talk to a trusted friend or colleague who has no emotional attachment to what you've already spent.</li>
+                <li><strong>Accept Losses as Tuition:</strong> Reframe past losses not as "waste," but as tuition paid for a valuable lesson.</li>
             </ul>
         </section>
 
